@@ -14,7 +14,7 @@ class HomeWidget extends StatelessWidget {
         ),
         body: ListView(children: [
           ListTile(
-            leading: buildSvgIcon("images/sqlite-icon.svg"),
+            leading: buildSvgIcon("images/db.svg"),
             title: const Text("SQLite"),
             subtitle: const Text("Lista de Pessoas"),
             trailing: const Icon(Icons.navigate_next),
@@ -22,7 +22,17 @@ class HomeWidget extends StatelessWidget {
               Navigator.pushNamed(context, "/sqlite");
             },
           ),
-          divisorListMain()
+          divisorListMain(),
+          ListTile(
+            leading: buildSvgIcon("images/sqlite-icon.svg"),
+            title: const Text("Floor"),
+            subtitle: const Text("Lista de livros"),
+            trailing: const Icon(Icons.navigate_next),
+            onTap: () {
+              Navigator.pushNamed(context, "/floor");
+            },
+          ),
+          divisorListMain(),
         ]));
   }
 }
